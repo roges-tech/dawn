@@ -20,7 +20,7 @@
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
     "animations_reveal_on_scroll": false,
-    "animations_hover_elements": "3d-lift",
+    "animations_hover_elements": "vertical-lift",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
     "buttons_radius": 0,
@@ -104,7 +104,7 @@
     "drawer_shadow_blur": 5,
     "badge_position": "bottom left",
     "badge_corner_radius": 40,
-    "sale_badge_color_scheme": "scheme-5",
+    "sale_badge_color_scheme": "scheme-a7af628d-10d5-4183-bceb-d03b575a8e10",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "Farmatrat",
     "brand_description": "<p>Oferecemos a melhor seleção de produtos para cuidar da sua saúde.</p>",
@@ -121,10 +121,11 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": false,
-    "cart_type": "notification",
+    "cart_type": "drawer",
     "show_vendor": false,
-    "show_cart_note": false,
+    "show_cart_note": true,
     "cart_drawer_collection": "",
+    "cart_color_scheme": "scheme-e9c19886-c5fc-4ea2-a722-42e98d8a28e1",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -214,7 +215,7 @@
           "text": "#ffffff",
           "button": "#ffffff",
           "button_label": "#00928c",
-          "secondary_button_label": "#121212",
+          "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
       },

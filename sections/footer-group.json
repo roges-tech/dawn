@@ -14,23 +14,22 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-2": {
-          "type": "text",
+        "brand_information_CLJjJe": {
+          "type": "brand_information",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+            "show_social": false
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "Acesso rápido",
             "menu": "footer"
           }
         }
       },
       "block_order": [
-        "footer-2",
+        "brand_information_CLJjJe",
         "footer-1"
       ],
       "settings": {
