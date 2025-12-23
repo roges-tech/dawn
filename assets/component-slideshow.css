@@ -12,6 +12,12 @@ slideshow-component .slideshow.banner {
   overflow-y: hidden;
 }
 
+/* Wrapper for slideshow with corner controls - this is the positioning context */
+.slideshow-wrapper-with-controls {
+  position: relative;
+  width: 100%;
+}
+
 .slideshow__slide {
   padding: 0;
   position: relative;
@@ -198,4 +204,135 @@ slideshow-component:not(.page-width) .slider-buttons {
   visibility: hidden;
   opacity: 0;
   transform: scale(0.8);
+}
+
+/* ==================== Corner Controls ==================== */
+/* Base styles for all corner-positioned controls */
+.slideshow__controls--corner {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(var(--color-background), 0.85);
+  backdrop-filter: blur(8px);
+  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+}
+
+.slideshow__controls--corner:hover {
+  background-color: rgba(var(--color-background), 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Previous button - left side, vertically centered */
+.slideshow__controls--left {
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  padding: 1.2rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow__controls--left:hover {
+  transform: translateY(-50%) translateX(-0.2rem);
+}
+
+/* Next button - right side, vertically centered */
+.slideshow__controls--right {
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  padding: 1.2rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow__controls--right:hover {
+  transform: translateY(-50%) translateX(0.2rem);
+}
+
+/* Counter/dots - bottom center */
+.slideshow__controls--bottom {
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.slideshow__controls--bottom:hover {
+  transform: translateX(-50%);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Autoplay button - top right corner */
+.slideshow__controls--top-right {
+  top: 2rem;
+  right: 2rem;
+  border-radius: 50%;
+  padding: 1.2rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow__controls--top-right:hover {
+  transform: scale(1.1);
+}
+
+.slideshow__controls--top-right .svg-wrapper {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 749px) {
+  .slideshow__controls--left,
+  .slideshow__controls--right {
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+  }
+  
+  .slideshow__controls--left {
+    left: 1rem;
+  }
+  
+  .slideshow__controls--right {
+    right: 1rem;
+  }
+  
+  .slideshow__controls--bottom {
+    bottom: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .slideshow__controls--top-right {
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+  }
+  
+  .slideshow__controls--top-right .svg-wrapper {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
 }
