@@ -12,33 +12,33 @@
     "slideshow_ppgHdB": {
       "type": "slideshow",
       "blocks": {
-        "slide_pPaKBK": {
+        "slide_BmmHf7": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Design_sem_nome.png",
             "image_overlay_opacity": 0,
-            "heading": "",
+            "heading": "Slide de imagem",
             "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
+            "subheading": "Conte a história de sua marca com vídeos e imagens",
+            "button_label": "Etiqueta de botão",
             "link": "",
             "button_style_secondary": false,
-            "show_text_box": false,
+            "show_text_box": true,
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "color_scheme": "scheme-1"
           }
         },
         "slide_BUcmif": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Linha_Micremma.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "",
-            "link": "",
+            "link": "shopify://collections/micremma",
             "button_style_secondary": false,
             "show_text_box": false,
             "box_align": "middle-center",
@@ -49,7 +49,7 @@
         }
       },
       "block_order": [
-        "slide_pPaKBK",
+        "slide_BmmHf7",
         "slide_BUcmif"
       ],
       "name": "t:sections.slideshow.presets.name",
