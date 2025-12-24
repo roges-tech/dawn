@@ -19,6 +19,51 @@ if (!customElements.get('media-gallery')) {
             .addEventListener('click', this.setActiveMedia.bind(this, mediaToSwitch.dataset.target, false));
         });
         if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();
+        
+        // Add main gallery navigation for thumbnail_slider_main layout
+        this.initMainGalleryNavigation();
+      }
+
+      initMainGalleryNavigation() {
+        const sliderButtons = this.elements.viewer?.querySelector('.slider-buttons');
+        if (!sliderButtons) return;
+
+        const prevButton = sliderButtons.querySelector('.slider-button--prev');
+        const nextButton = sliderButtons.querySelector('.slider-button--next');
+
+        if (prevButton) {
+          prevButton.addEventListener('click', this.navigateMainGallery.bind(this, 'prev'));
+        }
+        if (nextButton) {
+          nextButton.addEventListener('click', this.navigateMainGallery.bind(this, 'next'));
+        }
+      }
+
+      navigateMainGallery(direction) {
+        console.log(direction);
+
+        const allMediaItems = Array.from(this.elements.viewer.querySelectorAll('.product__media-item[data-media-id]'));
+        const currentActive = this.elements.viewer.querySelector('.product__media-item[data-media-id].is-active');
+
+        console.log(allMediaItems);
+        console.log(currentActive);
+        
+        if (!currentActive || allMediaItems.length === 0) return;
+
+        const currentIndex = allMediaItems.indexOf(currentActive);
+        let nextIndex;
+
+        if (direction === 'next') {
+          nextIndex = (currentIndex + 1) % allMediaItems.length;
+        } else {
+          nextIndex = (currentIndex - 1 + allMediaItems.length) % allMediaItems.length;
+        }
+
+        const nextMedia = allMediaItems[nextIndex];
+        if (nextMedia) {
+          const mediaId = nextMedia.getAttribute('data-media-id');
+          this.setActiveMedia(mediaId, false);
+        }
       }
 
       onSlideChanged(event) {
@@ -35,10 +80,16 @@ if (!customElements.get('media-gallery')) {
         if (!activeMedia) {
           return;
         }
+        
+        // Add is-active to new item FIRST, then remove from others
+        // This prevents the "vanishing" effect
+        activeMedia.classList.add('is-active');
+        
         this.elements.viewer.querySelectorAll('[data-media-id]').forEach((element) => {
-          element.classList.remove('is-active');
+          if (element !== activeMedia) {
+            element.classList.remove('is-active');
+          }
         });
-        activeMedia?.classList?.add('is-active');
 
         if (prepend) {
           activeMedia.parentElement.firstChild !== activeMedia && activeMedia.parentElement.prepend(activeMedia);
