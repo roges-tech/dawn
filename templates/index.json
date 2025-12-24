@@ -32,7 +32,7 @@
         "slide_BUcmif": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Linha_Micremma.png",
+            "image": "shopify://shop_images/Linha_Micremma_menor.png",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
