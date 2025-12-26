@@ -130,19 +130,19 @@
         "featured_collection_BkPEqm": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "peso-e-desempenho"
           }
         },
         "featured_collection_Udw6fV": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "bem-estar-e-saude"
           }
         },
         "featured_collection_wpBWPV": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "beleza-e-longevidade"
           }
         }
       },
@@ -156,9 +156,9 @@
         "title": "Nossas categorias",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "color_scheme": "scheme-a7af628d-10d5-4183-bceb-d03b575a8e10",
-        "show_view_all": true,
+        "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
