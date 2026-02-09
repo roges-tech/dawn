@@ -17,7 +17,7 @@
         "brand_information_CLJjJe": {
           "type": "brand_information",
           "settings": {
-            "show_social": false
+            "show_social": true
           }
         },
         "footer-1": {
@@ -26,18 +26,26 @@
             "heading": "Acesso rápido",
             "menu": "footer"
           }
+        },
+        "text_pVFama": {
+          "type": "text",
+          "settings": {
+            "heading": "Atendimento",
+            "subtext": ""
+          }
         }
       },
       "block_order": [
         "brand_information_CLJjJe",
-        "footer-1"
+        "footer-1",
+        "text_pVFama"
       ],
       "settings": {
         "color_scheme": "scheme-a7af628d-10d5-4183-bceb-d03b575a8e10",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
