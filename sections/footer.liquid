@@ -84,7 +84,67 @@
                     {% render block %}
                   {%- when 'text' -%}
                     <div class="footer-block__details-content rte">
-                      {{ block.settings.subtext }}
+                      {%- if block.settings.heading == 'Atendimento' -%}
+                        <div class="footer-block__attendance">
+                          <div class="attendance-item">
+                            <span class="svg-wrapper">
+                              {{- 'icon-whatsapp.svg' | inline_asset_content -}}
+                            </span>
+                            <a
+                              href="https://wa.me/+5555996068937"
+                              class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                            >
+                              (55) 99606-8937
+                            </a>
+                          </div>
+                          <div class="attendance-item">
+                            <span class="svg-wrapper">
+                              {{- 'icon-mail.svg' | inline_asset_content -}}
+                            </span>
+                            <a
+                              href="mailto:contato@farmatrat.com.br"
+                              class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                            >
+                              contato@farmatrat.com.br
+                            </a>
+                          </div>
+                          <div class="attendance-item">
+                            <span class="svg-wrapper">
+                              {{- 'icon-geo-alt.svg' | inline_asset_content -}}
+                            </span>
+                            <a
+                              href="https://www.google.com/maps/place/Farm%C3%A1cias+de+Manipula%C3%A7%C3%A3o+Farmatrat+Matriz/@-29.6882762,-53.8084713,21z/data=!4m6!3m5!1s0x9503cb2e11722479:0x9511e47fb867e0c2!8m2!3d-29.6882762!4d-53.8083105!16s%2Fg%2F11g2tz1z0v?entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D"
+                              class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                            >
+                              Rua Dr. Astrogildo de Azevedo, 39 - Centro, Santa Maria - RS, CEP: 97015-015
+                            </a>
+                          </div>
+                          <div class="attendance-item">
+                            <span class="svg-wrapper">
+                              {{- 'icon-geo-alt.svg' | inline_asset_content -}}
+                            </span>
+                            <a
+                              href="https://www.google.com/maps/place/Farm%C3%A1cias+de+Manipula%C3%A7%C3%A3o+Farmatrat+Filial+1/@-29.6867039,-53.805866,19.67z/data=!4m6!3m5!1s0x9503cb08c71d7aa9:0x8102c3a2e24d66dc!8m2!3d-29.6864701!4d-53.8056145!16s%2Fg%2F11p0brtkcz?entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D"
+                              class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                            >
+                              Rua Dr. Astrogildo de Azevedo, 354 - Centro, Santa Maria - RS, 97015-150
+                            </a>
+                          </div>
+                          <div class="attendance-item">
+                            <span class="svg-wrapper">
+                              {{- 'icon-geo-alt.svg' | inline_asset_content -}}
+                            </span>
+                            <a
+                              href="https://www.google.com/maps/place/Farm%C3%A1cias+de+Manipula%C3%A7%C3%A3o+Farmatrat+Acampamento/@-29.6871346,-53.8091572,17z/data=!3m1!4b1!4m6!3m5!1s0x9503cb6a4dc9fca3:0x49608790cddcf33c!8m2!3d-29.6871346!4d-53.8065823!16s%2Fg%2F11gfd324f4?entry=ttu&g_ep=EgoyMDI2MDIwOS4wIKXMDSoASAFQAw%3D%3D"
+                              class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                            >
+                              Rua do Acampamento, 112 - Centro, Santa Maria - RS, 97050-000
+                            </a>
+                          </div>
+                        </div>
+                      {%- else -%}
+                        {{ block.settings.subtext }}
+                      {%- endif -%}
                     </div>
                   {%- when 'link_list' -%}
                     {%- if block.settings.menu != blank -%}
@@ -304,6 +364,7 @@
         </small>
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
+            <li>CNPJ: 03.660.226/0001-07</li>
             {%- for policy in shop.policies -%}
               {%- if policy != blank -%}
                 <li>
@@ -317,11 +378,13 @@
         {%- endif -%}
         <br>
         <small class="copyright__content">
-          <strong>
-            Farmacêuticas responsáveis:
-          </strong>
+          <strong>Farmacêuticas responsáveis:</strong>
           <br>
-          Josane Barbiero Machado - CRF: 4939 | Anelise Barbiero Machado - CRF: 5098 | Mariane Barbiero Machado - CRF 7223
+          <ul class="policies list-unstyled">
+            <li style="list-style-type: none;">Josane Barbiero Machado - CRF: 4939</li>
+            <li>Anelise Barbiero Machado - CRF: 5098</li>
+            <li>Mariane Barbiero Machado - CRF: 7223</li>
+          </ul>
         </small>
       </div>
     </div>

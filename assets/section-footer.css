@@ -488,6 +488,40 @@
   }
 }
 
+/* Attendance section styles */
+.footer-block__attendance {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.attendance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.attendance-item .svg-wrapper {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+
+.attendance-item .svg-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.attendance-item a {
+  flex: 1;
+  line-height: 1.5;
+  align-self: center;
+}
+
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
   @media screen and (max-width: 749px) {
